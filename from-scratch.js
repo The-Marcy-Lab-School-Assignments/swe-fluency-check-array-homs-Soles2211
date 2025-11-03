@@ -77,16 +77,21 @@ console.log(getUserNames(sampleUsers));
 
 // Problem 8
 const getActiveUsersUnder30 = (users) => {
-
+  return users.filter((user) => user.age < 30 && user.isActive === true);
 };
 
+console.log(getActiveUsersUnder30(sampleUsers));
 
 // Problem 9
 const getTotalScore = (users) => {
-
+  return users.reduce((acc, user) => acc + user.score, 0);
 };
 
-// Problem 10
+console.log(getTotalScore(sampleUsers));
+
+//Problem 10
 const sortUsersByScoreDescending = (users) => {
-
+  return users.sort((user, b) => b.score - user.score);
 };
+
+console.log(sortUsersByScoreDescending(sampleUsers));
